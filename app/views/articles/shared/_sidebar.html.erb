@@ -1,0 +1,12 @@
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article, class: article.approach do %>
+        <%= article.title %>
+        <div class="date">
+          <%= l article.date, format: :long %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,31 @@
+<% title Article.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ Article.model_name.human }", new_admin_article_path %>
+</div>
+
+<%= informant_table @articles, {
+      :headings => [ 'Date',
+                     'Title',
+                     'News',
+                     'Academy',
+                     'Approach',
+                     'Image',
+                     'Infographic',
+                     'Guide',
+                     'Team Member',
+                     '',
+                     '' ],
+      :body => [ lambda{|x| l x.date, format: :short},
+                 :title,
+                 it_ajax_toggle(:news_content),
+                 it_ajax_toggle(:academy_content),
+                 lambda{|x| x.approach ? x.approach.titleize : 'None'},
+                 it_edit_images(:image),
+                 lambda{|x| link_to 'View Infographic', x.infographic.url if x.infographic?},
+                 lambda{|x| link_to 'View Guide', x.guide.url if x.guide?},
+                 lambda{|x| link_to x.team_member.name, edit_admin_team_member_path(x.team_member) if x.team_member},
+                 it_edit,
+                 it_destroy
+                ]
+    } %>

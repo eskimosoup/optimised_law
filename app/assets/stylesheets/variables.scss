@@ -1,0 +1,62 @@
+$main_font: Arial, Tahoma, sans-serif;
+
+@mixin zero {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+%submit-style {
+  width: 100%;
+  background-color: #63c5b7;
+  color: #ffffff;
+  border: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: "proxima-nova", Arial, sans-serif;
+  padding: 10px;
+  margin: 0px;
+  cursor: pointer;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+$attract-primary:   #63c5b7;
+$attract-secondary: #c0d7d4;
+
+$engage-primary:    #6a7dbf;
+
+$convert-primary:    #5b4665;
+
+$site-primary: #c9e7f1;
+
+
+$attract-text-color: #fff;
+$engage-text-color: $attract-text-color;
+$convert-text-color: $attract-text-color;
+
+$basefont: 16;
+
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// http://erskinedesign.com/blog/calculating-ems-scss/
+@function em($target-px) {
+  @return (strip-unit($target-px) / $basefont) * 1em;
+}
+
+// Optimised Law
+$gold: #b0a377;
+$green: #5cc4b7;
+$purple: #3D3356;
+$pale-purple: #DBDAE3;
+$main-font-colour: #444c63;
+$grey: #59545c;
+$link-colour: #454545;

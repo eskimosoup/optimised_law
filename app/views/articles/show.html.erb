@@ -1,0 +1,36 @@
+<% if @article.duplicate_content? %>
+  <%= content_for :head do %>
+    <link rel="canonical" href="http://www.optimised.today/articles/<%= @article.slug %>"/>
+  <% end %>
+<% end %>
+
+<header class="article-header article-background">
+  <div class="row top">
+    <div class="large-12 columns text-center">
+      <h1>
+        <%= @article.title %>
+      </h1>
+
+      <div class="date">
+        <%= l @article.date, format: :long %>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="row">
+  <div class="large-3 medium-3 columns">
+    <%= render "articles/shared/infographic" %>
+    <%= render "articles/shared/guide" %>
+
+    <div class="article-show-sidebar">
+      <%= render 'articles/shared/sidebar' %>
+    </div>
+
+    <%= link_to 'View all Articles', root_path, class: 'back-to-listing' %>
+  </div>
+
+  <div class="large-9 medium-9 columns">
+    <%= render "articles/shared/show" %>
+  </div>
+</div>

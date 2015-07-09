@@ -1,0 +1,11 @@
+<% unless @article.infographic.blank? %>
+  <div class="infographic-sidebar">
+    <h4>Download our Infographic</h4>
+
+    <div class="text-center">
+      <%= link_to @article.infographic.url, :title => @article.title, :rel => "lightbox" do %>
+        <%= image_tag "/assets/infographic_icon.png" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

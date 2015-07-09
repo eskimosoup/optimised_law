@@ -1,0 +1,34 @@
+<div class="w-hidden-small w-hidden-tiny side-menu" data-ix="side-menu-display-none-on-load" style="transform: translateX(0px) translateY(0px); display: block; transition: transform 500ms; -webkit-transition: transform 500ms;">
+  <div class="close-button">
+    <%= image_tag "close-button.png", alt: "Close", title: "Close", width: 23, data: { ix: "hide-side-bar" } %>
+  </div>
+  <div class="title side-menu-bar">Contact us</div>
+  <p class="side-menu-bar welcome-text">We'd love to hear from you!</p>
+
+  <div class="w-form form-wrapper">
+    <form class="w-clearfix" id="email-form-2" name="email-form-2" data-name="Email Form 2">
+
+      <label class="field-name" for="name-2">Name</label>
+      <input class="w-input input-box side-menu-bar" id="name-2" type="text" placeholder="Your name" name="name" data-name="Name 2" required="required" autofocus="autofocus">
+      <label class="field-name" for="Email-3">Email</label>
+      <input class="w-input input-box side-menu-bar" id="Email-3" type="email" placeholder="Your email" name="Email" data-name="Email" autofocus="autofocus" required="required">
+      <label class="field-name" for="Message-3">Message</label>
+      <textarea class="w-input input-box message side-bar" id="Message-3" placeholder="Your message" name="Message" data-name="Message" required="required"></textarea>
+      <input class="w-button button-light side-bar" type="submit" value="Submit" data-wait="Please wait...">
+
+    </form>
+    <div class="w-form-done sucess-message"><p>Thank you! Your submission has been received!</p></div>
+    <div class="w-form-fail"><p>Oops! Something went wrong while submitting the form :(</p></div>
+  </div>
+  <div class="w-clearfix find-us">
+    <div class="title side-menu-bar">Find us</div>
+    <div class="w-clearfix contact-info side-bar">
+      <div class="contact-text phone"><a class="tel" href="tel:01800123456">0333 772 9892</a></div>
+    </div>
+    <div class="w-clearfix contact-info side-bar top-divider">
+      <div class="contact-text address">
+        <a class="contact-link" href="mailto:info@yoursite.com?subject=Project%20Inquery">Salters House, Salters
+          Court, <br>156 High Street, Hull, HU1 1NQ</a></div>
+    </div>
+  </div>
+</div>

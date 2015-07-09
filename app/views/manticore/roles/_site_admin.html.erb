@@ -1,0 +1,24 @@
+<div class="nav_content">
+  <h2>Website Content</h2>
+  <ul>
+    <%= render "manticore/roles/shared" %>    
+  </ul>
+</div>
+
+<div class="nav_tools">
+  <h2>Management Tools</h2>
+  <ul>
+    <li><%= link_to 'Images', manticore.images_path, :class => 'images' %></li>
+    <li><%= link_to 'Documents', manticore.documents_path, :class => 'documents' %></li>
+    <li><%= link_to 'Administrators', manticore.administrators_path, :class => 'admins' %></li>
+    <li><%= link_to 'Site Structure', manticore.branches_path, :class => 'navigation' %></li>
+    <li><%= link_to 'Site Settings', manticore.site_settings_path, :class => 'settings' %></li>  
+  </ul>
+</div>
+
+<div class="nav_tools">
+  <h2>Useful Links</h2>
+  <ul>
+    <li><%= link_to 'Site Statistics', '/awstats', :target => '_blank' %></li>
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+.team-member {
+  background: $green;
+
+  img {
+    margin: em(20px);
+  }
+
+  a,
+  p,
+  h4 {
+    color: #fff;
+    border: none;
+    text-align: center;
+  }
+
+  .team-member-details {
+    margin-top: em(60px);
+  }
+}

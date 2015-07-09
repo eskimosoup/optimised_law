@@ -1,0 +1,30 @@
+<%= image_tag @article.image, alt: @article.title if @article.image.present? %>
+
+<% unless @article.video.blank? %>
+  <%= raw @article.video %>
+<% end %>
+
+<% unless @article.summary.blank? %>
+  <h2>The Article in Bullet Points</h2>
+  <%= raw @article.summary %>
+<% end %>
+
+<%= raw @article.content %>
+
+<div class="clear"></div>
+<div class="team-member">
+  <div class="row">
+    <div class="large-6 medium-4 small-4 columns">
+      <%= image_tag @article.team_member.image.large, alt: @article.team_member.name %>
+    </div>
+    <div class="large-6 medium-8 small-8  columns">
+      <div class="team-member-details text-center">
+        <h4>
+          <%= link_to @article.team_member.name, '#', class: 'team-member-name' %>
+        </h4>
+
+        <p><%= @article.team_member.tag_line %></p>
+      </div>
+    </div>
+  </div>
+</div>

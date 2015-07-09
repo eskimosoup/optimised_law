@@ -1,0 +1,7 @@
+<% unless @article.guide.blank? %>
+  <div class="infographic-sidebar">
+    <%= link_to @article.guide.url, title: @article.title do %>
+      <h4>Download our Guide</h4>
+    <% end %>
+  </div>
+<% end %>

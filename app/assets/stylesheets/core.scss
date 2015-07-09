@@ -1,0 +1,83 @@
+@import "variables";
+
+/*--Main--*/
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+p {
+  margin: 0px;
+  padding: 8px 0px 8px 0px;
+}
+
+
+hr {
+  border: 0px;
+  border-bottom: 1px solid #333333;
+  height: 0px;
+  clear: left;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 0px 0px 0px;
+}
+
+
+/*--Links--*/
+a {
+  color: $link-colour;
+  text-decoration: none;
+  &:visited, &:active {
+    color:$link-colour;
+  }
+  &:hover {
+    color: $link-colour; text-decoration: underline;
+  }
+}
+
+/*--Titles--*/
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h3 {
+  margin-top: 25px;
+  margin-bottom: 13px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #b0a377;
+  font-family: Lato, sans-serif;
+  color: #59545c;
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+
+/*--Image Styles--*/
+img.image-right {
+  float: right;
+  margin: 4px 0px 8px 15px;
+}
+
+img.image-left {
+  float: left;
+  margin: 4px 15px 8px 0px;
+}

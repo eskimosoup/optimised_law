@@ -1,0 +1,12 @@
+<div class="article-container <%= "#{article.approach}-style" if article.approach.present? %>">
+  <div class="article-entry <%= article.type %> <%= article.approach %>">
+    <h4>
+      <%= link_to article.title, article, title: article.title %>
+    </h4>
+
+
+    <%= link_to article_path(article), class: 'container-date' do %>
+      <%= l article.date, format: :long %>
+    <% end %>
+  </div>
+</div>

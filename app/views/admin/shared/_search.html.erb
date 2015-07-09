@@ -1,0 +1,10 @@
+<%= form_tag( {}, { :method => 'get', :style => "background-color: transparent;" } ) do %>
+  <div class="fields_and_actions">
+    <%= text_field_tag :search, params[:search] %>
+    <%= hidden_field_tag :order, params[:order] %>
+
+    <div class="actions inline">
+      <%= submit_tag 'Search' %>
+    </div>
+  </div>
+<% end %>

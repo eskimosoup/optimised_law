@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" data-wf-site="556c602ba501981870b39238">
+  <head>
+    <%= render 'layouts/head' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+
+    <%= yield %>
+
+    <% unless ( params[:action] == 'index' or params[:action] == 'attract' or params[:action] == 'engage' or params[:action] == 'convert' ) and params[:controller] == 'application' %>
+      <%= render 'layouts/footer' %>
+    <% end %>
+
+    <%= javascript_include_tag "application" %>
+
+    <%= yield :footer %>
+  </body>
+</html>

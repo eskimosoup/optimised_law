@@ -1,0 +1,28 @@
+<header>
+  <%= render "contacts/pop_out_form" %>
+  <div class="w-hidden-medium w-hidden-small w-hidden-tiny back-to-the-top">
+    <a class="w-inline-block back-to-the-top" href="#">
+      <%= image_tag "up-arrow-icon.png", title: "Back to top", alt: "Back to top" %>
+    </a>
+  </div>
+  <div class="w-nav nav-bar nav-menu-mobile" data-collapse="medium" data-animation="over-right" data-duration="400" data-easing="ease-in-out">
+    <%= link_to "#{SITE_SETTINGS["Webflow Site"]}/index.html", class: "w-nav-brand brand" do %>
+      <%= image_tag "optimised-law-logo.png", title: "Optimised Law", alt: "Optimised Law" %>
+    <% end %>
+
+    <a class="w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block contact-us-block" href="#" data-ix="show-side-menu"></a>
+
+    <%= render "layouts/header_navigation_links" %>
+  </div>
+  <div class="w-nav fixed-nav-bar" id="Top" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" data-ix="display-none-on-load">
+    <a class="w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block contact-us-block" href="#" id="Top-test" data-ix="show-side-menu"></a>
+    <%= link_to "#{SITE_SETTINGS["Webflow Site"]}/index.html", class: "w-nav-brand brand" do %>
+      <%= image_tag "optimised-law-logo.png", title: "Optimised Law", alt: "Optimised Law" %>
+    <% end %>
+
+    <div class="w-nav-button menu-bg">
+      <%= image_tag "burger-menu.png" %>
+    </div>
+    <%= render "layouts/header_navigation_links" %>
+  </div>
+</header>

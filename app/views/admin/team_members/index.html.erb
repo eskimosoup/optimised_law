@@ -1,0 +1,32 @@
+<% title TeamMember.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ TeamMember.model_name.human }", new_admin_team_member_path %>
+</div>
+
+<%= informant_table @team_members, {
+      :headings => [ '',
+                     'Name',
+                     'Image',
+                     'Tag Line',
+                     'Google+',
+                     'Twitter',
+                     'Display',
+                     'Job Title',
+                     'Director',
+                     '',
+                     ''
+                    ],
+      :body => [ it_sort,
+                :name,
+                it_edit_images(:image),
+                :tag_line,
+                lambda{|x| link_to 'Google+', "https://plus.google.com/#{x.google_plus}/posts", :target => "_blank" if x.google_plus?},
+                lambda{|x| link_to "@#{x.twitter}", "https://twitter.com/#{x.twitter}", :target => "_blank" if x.twitter?},
+                it_ajax_toggle(:display),
+                :job_title,
+                it_ajax_toggle(:director),
+                it_edit,
+                it_destroy
+                ]
+    } %>

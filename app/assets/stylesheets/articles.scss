@@ -1,0 +1,243 @@
+%article-background {
+  background-color: $gold;
+}
+
+%attract {
+  background-color: $grey;
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  h4 {
+    border-bottom: 2px solid $gold;
+  }
+}
+
+%engage {
+  background-color: $purple;
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  h4 {
+    border-bottom: 2px solid $green;
+  }
+}
+
+%convert {
+  background-color: $green;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
+
+.article-background {
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url("article-background.jpg");
+  background-position: top, center;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll, fixed;
+  padding: 45px 27px 16px;
+}
+
+.article-header {
+  h1 {
+    font-family: Lato,sans-serif;
+    color: white;
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  margin-bottom: em(20px);
+  padding: em(40px) 0;
+
+  .date {
+    display: block;
+    font-size: em(10px);
+    margin-bottom: em(6px);
+    text-transform: uppercase;
+    color: white;
+  }
+
+  hr {
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 140, 186, .75), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 140, 186, .75), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 140, 186, .75), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 140, 186, .75), rgba(0, 0, 0, 0));
+    border: 0;
+    height: 1px;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.article-show-sidebar {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    line-height: 1.25;
+  }
+
+  a {
+    @extend %article-background;
+    background-position: top right;
+    background-repeat: no-repeat;
+    display: block;
+    margin: em(1px) 0;
+    padding: em(15px) em(35px) em(15px) em(15px);
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .attract {
+    @extend %attract;
+  }
+
+  .engage {
+    @extend %engage;
+  }
+
+  .convert {
+    @extend %convert;
+  }
+
+  .date {
+    display: block;
+    font-size: em(10px);
+    margin: em(10px) 0;
+    text-transform: uppercase;
+  }
+}
+
+.article-container {
+  @extend %article-background;
+  //background-image: image-url('article/orb.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+  border: 2px solid #fff;
+  float: left;
+  width: 32%;
+
+  &.attract-style {
+    @extend %attract;
+  }
+
+  &.engage-style {
+    @extend %engage;
+  }
+
+  &.convert-style {
+    @extend %convert;
+  }
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .article-entry {
+    padding: em(20px);
+  }
+
+  h4 {
+    margin: 0 0 em(10px);
+
+    span {
+      color: #fff;
+      float: right;
+      font-size: em(8px);
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    font-size: em(14px);
+    line-height: 1.2;
+    margin: em(12px) 0 0;
+  }
+
+  .container-date,
+  .container-small-text {
+    display: block;
+    font-size: em(10px);
+    margin-bottom: em(6px);
+    text-transform: uppercase;
+  }
+}
+
+
+.infographic-sidebar {
+  @extend %convert;
+  margin: em(14px) 0 em(10px);
+  padding: em(20px) 0;
+
+  h4 {
+    color: #fff;
+    font-size: em(16px);
+    text-align: center;
+  }
+}
+
+nav.pagination {
+  text-align: center;
+  margin-top: 20px;
+  span {
+    padding: 5px;
+    margin: 2px;
+
+    background: $purple;
+    border: 2px solid $purple;
+    color: $gold;
+
+    &.page.current {
+      border-color: $gold;
+    }
+    a {
+      color: $gold;
+    }
+    &:not(.current):hover {
+      border-color: $gold;
+      transition: all 0.5s ease-in-out 0s, transform 500ms;
+      -webkit-transition: all 0.5s ease-in-out 0s, transform 500ms;
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+}
+
+%filter-link {
+  display: block;
+  float: left;
+  margin: em(1px) 0;
+  padding: em(15px);
+}
+
+a.back-to-listing {
+  @extend %filter-link, %article-background;
+  width: 100%;
+  color: white;
+
+  &:hover {
+    @extend %convert;
+  }
+}
