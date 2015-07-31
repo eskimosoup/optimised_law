@@ -7,7 +7,7 @@ class MarketingAssessmentSignupsController < ApplicationController
     @marketing_assessment_signup = MarketingAssessmentSignup.new(marketing_assessment_signup_params)
     if @marketing_assessment_signup.valid?
       AcademyEntriesMailer.new_assessment(@marketing_assessment_signup).deliver_now
-      redirect_to academy_entries_path, notice: 'Message sent'
+      redirect_to new_marketing_assessment_signup_path, notice: 'Thank you for your interest, please check your inbox'
     else
       render :new
     end

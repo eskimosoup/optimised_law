@@ -1,5 +1,21 @@
-<%= academy_entry.title %>
-<%= academy_entry.level %>
-<%= academy_entry.summary %>
-<%= academy_entry.mailchimp_frequency %>
-<%= image_tag academy_entry.image.small %>
+<div class="w-col w-col-4 underline-table-col" data-ix="show-up">
+  <div class="hover-on-books-div">
+    <%= link_to academy_entry, class: 'table-link overlay-version' do %>
+      <%= academy_entry.title.upcase %>
+    <% end %>
+    <%= link_to academy_entry, class: 'w-inline-block email-series-cover-div' do %>
+      <div class="click-me-link">Send me this guide</div><%= image_tag academy_entry.image.large %>
+    <% end %>
+    <div class="level-text <%= academy_entry.level.downcase %>"><%= academy_entry.level %></div>
+    <% if academy_entry.mailchimp_frequency %>
+      <div class="sub-heading"><%= academy_entry.mailchimp_frequency %></div>
+    <% end %>
+  </div>
+  <%= link_to academy_entry, class: 'table-link' do %>
+    <%= academy_entry.title.upcase %>
+  <% end %>
+  <a class="w-inline-block email-series-cover-div" href="#"><%= image_tag academy_entry.image.large %>
+  </a>
+  <div class="level-text <%= academy_entry.level.downcase %>"><%= academy_entry.level %></div>
+  <div class="sub-heading dark"><%= academy_entry.mailchimp_frequency %></div>
+</div>

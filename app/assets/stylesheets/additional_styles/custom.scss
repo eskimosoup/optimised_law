@@ -1,0 +1,119 @@
+.w-container {
+  ul,
+  ol,
+  dl {
+    margin-left: 20px;
+    font-size: 14px;
+    list-style-position: inside;
+  }
+}
+
+.internal-copy {
+  ul,
+  ol,
+  dl {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+}
+
+#error_explanation {
+  h2 {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: #fff;
+  }
+}
+
+.flash-message {
+  background: #5cc4b7;
+  border: 1px solid #fff;
+  margin: 10px 0;
+  padding: 10px;
+  color: #fff;
+
+  &.notice {
+  }
+
+  &.error {
+    font-weight: bold;
+  }
+
+  &.alert {
+    font-weight: bold;
+  }
+}
+
+#form_area {
+  #mc_embed_signup {
+    background: none;
+    padding: 0;
+
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-family: Lato, sans-serif;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .clear {
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 17px;
+      margin-bottom: 15px;
+      padding: 11px 15px;
+      border: 2px solid #5cc4b7;
+      border-radius: 0px;
+      background-color: white;
+      opacity: 1;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      -webkit-transition: all 500ms ease-in-out;
+      transition: all 500ms ease-in-out;
+      font-family: Lato, sans-serif;
+      color: #5cc4b7;
+      font-size: 13px;
+      line-height: 15px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      height: auto;
+
+      &:hover {
+        border-color: #c8d7d4;
+        background-color: rgba(0, 0, 0, 0.90);
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+      }
+    }
+
+    div.response {
+      background-color: #fff;
+      width: 100%;
+      padding: 20px;
+      margin: 0;
+    }
+  }
+}
+
+.green-highlight {
+  margin-bottom: 23px;
+}

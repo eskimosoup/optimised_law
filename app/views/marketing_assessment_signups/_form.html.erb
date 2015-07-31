@@ -1,3 +1,18 @@
+<!--
+<form class="form-wrapper" id="email-form" name="email-form" data-name="Email Form">
+  <input class="w-input" id="Forename-3" type="text" placeholder="Your Forename" name="Forename-3" data-name="Forename 3" required="required">
+  <input class="w-input" id="Surname-3" type="text" placeholder="Your Surname" name="Surname-3" data-name="Surname 3" required="required">
+  <div>
+    <input class="w-input" id="Email-4" type="email" placeholder="Your Email" name="Email" data-name="Email" required="required">
+    <input class="w-input" id="Company-2" type="email" placeholder="Company" name="Company-2" data-name="Company 2" required="required">
+    <input class="w-input" id="Website-2" type="email" placeholder="Website" name="Website-2" data-name="Website 2" required="required">
+    <input class="w-input" id="Current-Marketing-Budget-2" type="email" placeholder="Current Marketing Budget" name="Current-Marketing-Budget-2" data-name="Current Marketing Budget 2">
+  </div>
+  <input class="w-button button-light centred" type="submit" value="Submit" data-wait="Please wait..." data-ix="hover-jump">
+</form>
+-->
+
+
 <%= form_for @marketing_assessment_signup do |f| %>
   <% if @marketing_assessment_signup.errors.any? %>
     <div id="error_explanation">
@@ -14,36 +29,30 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :forename %>
-    <%= f.text_field :forename %>
+    <%= f.text_field :forename, placeholder: 'Your First Name', class: 'w-input', required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :surname %>
-    <%= f.text_field :surname %>
+    <%= f.text_field :surname, placeholder: 'Your Last Name', class: 'w-input', required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, placeholder: 'Your Email Address', class: 'w-input', required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :company %>
-    <%= f.text_field :company %>
+    <%= f.text_field :company, placeholder: 'Company', class: 'w-input', required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :website %>
-    <%= f.text_field :website %>
+    <%= f.text_field :website, placeholder: 'Website', class: 'w-input', required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :budget %>
-    <%= f.text_field :budget, placeholder: 'Current marketing budget' %>
+    <%= f.text_field :budget, placeholder: 'Current marketing budget', class: 'w-input', required: true %>
   </div>
 
   <div class="actions">
-    <%= f.submit 'Submit' %>
+    <%= f.submit 'Submit', class: 'w-button button-light centred', data: { ix: 'hover-jump' } %>
   </div>
 <% end %>

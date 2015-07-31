@@ -6,9 +6,10 @@ Rails.application.routes.draw do
       get 'thank-you', as: 'thank_you', to: 'academy_entry_downloads#show'
     end
   end
-  resources :marketing_assessment_signups, only: [:new, :create]
+  resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
 
   namespace :admin do
+    manticore_resources :academy_entry_downloads
     chronicler_resources :academy_entries
     chronicler_resources :articles
     chronicler_resources :team_members

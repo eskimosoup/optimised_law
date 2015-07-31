@@ -2,8 +2,8 @@ class AcademyEntriesController < ApplicationController
   before_action :set_academy_entry, only: :show
 
   def index
-    @academy_series    = AcademyEntry.where(display: true).where.not(mailchimp_form: nil)
-    @academy_resources = AcademyEntry.where(display: true, mailchimp_form: nil)
+    @academy_series    = AcademyEntry.mailchimp_series
+    @academy_resources = AcademyEntry.pdf_resources
     @marketing_assessment_signup = MarketingAssessmentSignup.new
   end
 

@@ -75,11 +75,12 @@ a {
 
 .clear {
   clear: both;
-  height: 0px;
+  //height: 0px;
   overflow: hidden;
 }
 
 /* Forms */
+/*
 form {
   @include zero;
 }
@@ -143,7 +144,7 @@ form input.check_box, form input.checkbox, form input.radio_button {
 .actions input:hover {
   background-color: #000000;
 }
-
+*/
 /*
 .field_with_errors {
   display: inline-block;
