@@ -1,0 +1,10 @@
+<% title AcademyEntry.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ AcademyEntry.model_name.human }", new_admin_academy_entry_path %>
+</div>
+
+<%= informant_table @academy_entries, {
+      :headings => [ 'Title', 'Image', 'Level', 'Pdf Download', 'Mailchimp Series', 'Display', '', '' ],
+      :body => [ :title, it_edit_images(:image), :level, lambda{|x| link_to 'PDF download', x.pdf_download.url }, lambda{|x| 'Yes' if x.mailchimp_form.present? }, it_ajax_toggle(:display), it_edit, it_destroy ]
+    } %>

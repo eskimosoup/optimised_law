@@ -1,0 +1,7 @@
+<%= render partial: 'academy_entry', collection: @academy_series, as: :academy_entry %>
+<hr />
+<%= render partial: 'academy_entry', collection: @academy_resources, as: :academy_entry %>
+
+<%= render 'shared/flash_messages' %>
+
+<%= render 'marketing_assessment_signups/form' %>

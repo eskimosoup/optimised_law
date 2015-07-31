@@ -1,0 +1,10 @@
+<%= @academy_entry.title %>
+<%= @academy_entry.level %>
+<%= @academy_entry.summary %>
+<%= @academy_entry.mailchimp_frequency %>
+<%= @academy_entry.mailchimp_form %>
+<%= image_tag @academy_entry.image.small %>
+
+<%= render 'shared/flash_messages' %>
+
+<%= render 'academy_entry_downloads/form' if @academy_entry.mailchimp_form.blank? %>

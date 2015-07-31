@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619111233) do
+ActiveRecord::Schema.define(version: 20150731082018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "academy_entries", force: :cascade do |t|
+    t.string   "title",                              null: false
+    t.string   "image",                              null: false
+    t.string   "level",                              null: false
+    t.string   "pdf_download",                       null: false
+    t.text     "summary",                            null: false
+    t.text     "mailchimp_form"
+    t.string   "mailchimp_frequency"
+    t.string   "slug"
+    t.boolean  "display",             default: true
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",                             null: false
@@ -77,6 +91,15 @@ ActiveRecord::Schema.define(version: 20150619111233) do
     t.datetime "password_reset_send_at"
   end
 
+  create_table "seo_entries", force: :cascade do |t|
+    t.string   "nominal_url"
+    t.string   "title"
+    t.text     "meta_description"
+    t.boolean  "in_sitemap",       default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "team_members", force: :cascade do |t|
     t.string   "name"
     t.text     "profile"
@@ -91,6 +114,7 @@ ActiveRecord::Schema.define(version: 20150619111233) do
     t.string   "sector"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.string   "email"
   end
 
   create_table "willow_branches", force: :cascade do |t|

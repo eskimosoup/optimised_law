@@ -1,0 +1,49 @@
+<%= form_for @marketing_assessment_signup do |f| %>
+  <% if @marketing_assessment_signup.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize @marketing_assessment_signup.errors.count, 'error' %> prevented this message from being sent
+      </h2>
+
+      <ul>
+        <% @marketing_assessment_signup.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :forename %>
+    <%= f.text_field :forename %>
+  </div>
+
+  <div class="field">
+    <%= f.label :surname %>
+    <%= f.text_field :surname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :company %>
+    <%= f.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= f.label :budget %>
+    <%= f.text_field :budget, placeholder: 'Current marketing budget' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Submit' %>
+  </div>
+<% end %>
