@@ -1,0 +1,15 @@
+<h1><%= @resource.title %> Download</h1>
+
+<p>
+  Hi,
+  <%= @details.forename %>
+  <%= @details.surname %>
+</p>
+
+<p>
+  Please click the link below to download your resource.
+</p>
+
+<p>
+  <%= link_to 'Download PDF resource', "#{root_url}#{@resource.pdf_download.url}" %>
+</p>

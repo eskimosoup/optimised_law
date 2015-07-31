@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  image: MyString
+  level: MyString
+  pdf_download: MyString
+  summary: MyText
+  mailchimp_form: MyText
+  mailchimp_frequency: MyString
+  display: false
+
+two:
+  title: MyString
+  image: MyString
+  level: MyString
+  pdf_download: MyString
+  summary: MyText
+  mailchimp_form: MyText
+  mailchimp_frequency: MyString
+  display: false

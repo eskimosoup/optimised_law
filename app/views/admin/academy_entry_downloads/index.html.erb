@@ -1,0 +1,11 @@
+<% title AcademyEntryDownload.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%#= link_to "New #{ AcademyEntryDownload.model_name.human }", new_admin_academy_entry_download_path %>
+</div>
+
+<%= informant_table @academy_entry_downloads, {
+      :headings => [ 'Academy Entry', 'Forename', 'Surname', 'Email' ],
+      :body => [ lambda{|x| x.academy_entry.title }, :forename, :surname, :email ]
+      #:body => [ :forename, :surname, :email, :company, it_edit, it_destroy ]
+    } %>

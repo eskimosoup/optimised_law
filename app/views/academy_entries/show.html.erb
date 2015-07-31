@@ -1,0 +1,30 @@
+<div class="w-section guide-download-section" data-ix="display-tech-nav">
+  <div class="w-container">
+    <div class="w-row white-guide-wrapper">
+      <div class="w-col w-col-2">
+        <div class="guide-show-div" data-ix="show-up"><%= image_tag @academy_entry.image.small %>
+        </div>
+      </div>
+      <div class="w-col w-col-4 white-col" data-ix="show-up-2">
+        <h4><%= @academy_entry.title.upcase %></h4>
+        <div class="level-text <%= @academy_entry.level.downcase %>"><%= @academy_entry.level %></div>
+        <div class="internal-copy"><%= raw @academy_entry.summary %></div>
+        <div><%= @academy_entry.mailchimp_frequency %></div>
+      </div>
+      <div class="w-col w-col-6 col-no-spacing">
+        <div class="half-div purple-bg" data-ix="show-up-3">
+          <div class="w-form guide-form-wrapper">
+            <%= render 'shared/flash_messages' %>
+
+            <div id="form_area">
+              <%= raw @academy_entry.mailchimp_form %>
+            </div>
+
+            <%= render 'academy_entry_downloads/form' if @academy_entry.mailchimp_form.blank? %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-download-div"></div>
