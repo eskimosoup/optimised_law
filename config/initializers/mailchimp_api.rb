@@ -1,0 +1,1 @@
+MAILCHIMP_API_KEY = "bc8714a2edfeab4742264b82f96bde7c-us9"

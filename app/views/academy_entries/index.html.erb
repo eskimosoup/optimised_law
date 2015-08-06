@@ -1,26 +1,29 @@
 <div class="w-section section-modules email-series-section-bg" data-ix="display-tech-nav">
   <div class="w-container internal-container">
     <div class="box-title">
-      <h6 class="block">Email Series</h6>
-      <div class="internal-copy">Our email series cover broader or more advanced topics. Content is delivered through easily digestible regular emails over a number of weeks. We also provide each guide as a downloadable PDF so you can read at you own pace if desired.</div>
+      <h6 class="block">Help Guides</h6>
+      <div class="internal-copy">Content is delivered through easily digestible regular emails over a number of weeks. We also provide each guide as a downloadable PDF so you can read at you own pace if desired.</div>
     </div>
     <div class="w-row">
       <%= render partial: 'academy_entry', collection: @academy_series, as: :academy_entry %>
     </div>
   </div>
 </div>
-<div class="w-section section">
-  <div class="w-container internal-container" data-ix="show-up-from-left">
-    <div class="box-title">
-      <h6 class="gold-block">quick guides</h6>
-      <div class="internal-copy">Our quick guides offer practical advice on a specific subject and will usually take just 5 minutes of your time to read.</div>
+
+  <div class="w-section section">
+    <div class="w-container internal-container" data-ix="show-up-from-left">
+      <% if @academy_resources.present? %>
+      <div class="box-title">
+        <h6 class="gold-block">quick guides</h6>
+        <div class="internal-copy">Our quick guides offer practical advice on a specific subject and will usually take just 5 minutes of your time to read.</div>
+      </div>
+      <div class="w-row">
+        <%= render partial: 'academy_entry', collection: @academy_resources, as: :academy_entry %>
+      </div>
     </div>
-    <div class="w-row">
-      <%= render partial: 'academy_entry', collection: @academy_resources, as: :academy_entry %>
-    </div>
+
+    <% end %>
+    <%= render 'marketing_assessment_signups/call_to_action' %>
   </div>
-  
-  <%= render 'marketing_assessment_signups/call_to_action' %>
-</div>
 
 <%= render 'shared/flash_messages' %>

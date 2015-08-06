@@ -1,0 +1,16 @@
+<% title MailchimpSubscription.model_name.human.pluralize %>
+
+<%= form_tag admin_mailchimp_subscriptions_path, method: :get do %>
+  <div class="field">
+    <%= label_tag :mailchimp_list_name %><br />
+    <%= select_tag :mailchimp_list_name, options_for_select(MailchimpSubscription.uniq.pluck(:mailchimp_list_name).map{|x| [x, x]}, selected: params[:mailchimp_list_name]), prompt: 'Filter by list name' %>
+  </div>
+
+  <%= submit_tag 'Filter' %>
+<% end %>
+
+
+<%= informant_table @mailchimp_subscriptions, {
+      :headings => [ 'Forename', 'Surname', 'Email', 'Mailchimp List Name',  ],
+      :body => [ :forename, :surname, :email, :mailchimp_list_name ]
+    } %>

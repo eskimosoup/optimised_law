@@ -1,0 +1,19 @@
+<%= form_for @mailchimp_subscription, url: mailchimp_subscription_academy_entry_path, html: { id: 'email-form' } do |f| %>
+  <h6 class="white-centred">Send me this Guide</h6>
+
+  <% if @mailchimp_subscription.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize @mailchimp_subscription.errors.count, 'error' %> prevented this message from being sent
+      </h2>
+
+      <ul>
+        <% @mailchimp_subscription.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= render 'academy_entry_downloads/form_fields', f: f %>
+<% end %>

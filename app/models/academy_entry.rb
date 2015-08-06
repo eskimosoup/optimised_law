@@ -14,4 +14,8 @@ class AcademyEntry < ActiveRecord::Base
   scope :pdf_resources, -> { where(display: true, mailchimp_form: nil).order(:title) }
 
   LEVELS = ['Beginner', 'Intermediate', 'Advanced']
+
+  def mailchimp_form_name
+    MailchimpSubscription.list_name(self.mailchimp_form)
+  end
 end

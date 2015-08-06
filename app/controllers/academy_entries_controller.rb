@@ -9,6 +9,7 @@ class AcademyEntriesController < ApplicationController
 
   def show
     @academy_entry_download = AcademyEntryDownload.new if @academy_entry.mailchimp_form.blank?
+    @mailchimp_subscription = MailchimpSubscription.new if @academy_entry.mailchimp_form.present?
     redirect_to @academy_entry, status: :moved_permanently if request.path != academy_entry_path(@academy_entry)
   end
 
