@@ -28,24 +28,7 @@
           <div class="w-form guide-form-wrapper">
             <%= render 'shared/flash_messages' %>
 
-            <div id="form_area">
-              <%= raw @academy_entry.mailchimp_form %>
-            </div>
-
-            <div class="marketing-assessment-call-to-action hide">
-              <div class="w-container free-internet-container" data-ix="show-up">
-                <h3 class="green-highlight centred"><span class="free">Free</span> Internet Marketing Assessment</h3>
-                <div class="w-row">
-                  <div class="w-col w-col-12">
-                    <div class="paragraph-white">We specialise in Internet Marketing for law firms. We are offering a free assessment of your existing website and internet marketing to show you how you can maximise your conversion rates.
-
-                    <div class="paragraph-white">If you'd like this free assessment, <%= link_to 'please fill out the form', new_marketing_assessment_signup_path %> and one of our experts will contact you shortly.</div>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
+            <%= render 'mailchimp_subscriptions/form' if @academy_entry.mailchimp_form.present? %>
             <%= render 'academy_entry_downloads/form' if @academy_entry.mailchimp_form.blank? %>
           </div>
         </div>

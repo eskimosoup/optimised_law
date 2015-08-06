@@ -1,0 +1,15 @@
+<div class="field">
+  <%= f.text_field :forename, class: 'w-input', placeholder: 'Your First Name', required: true %>
+</div>
+
+<div class="field">
+  <%= f.text_field :surname, class: 'w-input', placeholder: 'Your Last Name', required: true %>
+</div>
+
+<div class="field">
+  <%= f.text_field :email, class: 'w-input', placeholder: 'Your Email Address', required: true %>
+</div>
+
+<div class="actions">
+  <%= f.submit 'Submit', class: 'w-button button-light centred', data: { ix: 'hover-jump' } %>
+</div>

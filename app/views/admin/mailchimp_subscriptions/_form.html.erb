@@ -1,0 +1,33 @@
+<%= form_for([:admin, @mailchimp_subscription]) do |f| %>
+
+  <%= f.error_messages %>
+
+  <%= field_set_tag 'Basic' do -%>
+    
+    <div class="field">
+      <%= f.label :forename %><br />
+      <%= f.text_field :forename %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :surname %><br />
+      <%= f.text_field :surname %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :mailchimp_list_name %><br />
+      <%= f.text_field :mailchimp_list_name %>
+    </div>
+    
+  <% end -%>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>

@@ -17,5 +17,7 @@
   <a class="w-inline-block email-series-cover-div" href="#"><%= image_tag academy_entry.image.large %>
   </a>
   <div class="level-text <%= academy_entry.level.downcase %>"><%= academy_entry.level %></div>
-  <div class="sub-heading dark"><%= academy_entry.mailchimp_frequency %></div>
+  <% if  academy_entry.mailchimp_frequency.present? %>
+    <div class="sub-heading dark"><%= academy_entry.mailchimp_frequency %></div>
+  <% end %>
 </div>
