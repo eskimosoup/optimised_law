@@ -14,7 +14,7 @@ module Admin
 
     def update
       @seo_entry = SeoEntry.find(params[:id])
-      if @seo_entry.update_attributes(params[:seo_entry])
+      if @seo_entry.update(seo_entry_params)
         redirect_to admin_seo_entries_path, :notice => "Seo entry successfully updated."
       else
         render :action => 'edit'

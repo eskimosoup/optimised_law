@@ -5,7 +5,7 @@ class SEO
       when 'articles'
         Article.order(:title)
       when 'academy_entries'
-        Article.order(:title)
+        AcademyEntry.order(:title)
       else
         []
     end
@@ -16,7 +16,7 @@ class SEO
       when 'articles'
         Article.where('display = ? and date <= ?', true, Date.today).order(:title)
       when 'academy_entries'
-        Article.where(display: true).order(:title)
+        AcademyEntry.where(display: true).order(:title)
     else
       []
     end
