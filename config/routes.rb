@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   namespace :admin do
     manticore_resources :mailchimp_subscriptions
     manticore_resources :academy_entry_downloads
+    manticore_resources :seo_entries do
+      get 'rebuild_seo', on: :collection
+    end
     chronicler_resources :academy_entries
     chronicler_resources :articles
     chronicler_resources :team_members
