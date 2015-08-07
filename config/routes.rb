@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   resources :articles, only: :show
-  resources :academy_entries, only: [:index, :show], path: 'academy' do
-    member do
-      post 'create', as: 'download', to: 'academy_entry_downloads#create'
-      post 'subscribe', as: 'mailchimp_subscription', to: 'mailchimp_subscriptions#create'
-      get 'thank-you', as: 'thank_you', to: 'academy_entry_downloads#show'
+
+  constraints subdomain: 'academy.optimisedlaw' do
+    get '/', to: 'academy_entries#index'
+    resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
+    resources :academy_entries, only: [:show], path: '' do
+      member do
+        post 'create', as: 'download', to: 'academy_entry_downloads#create'
+        post 'subscribe', as: 'mailchimp_subscription', to: 'mailchimp_subscriptions#create'
+        get 'thank-you', as: 'thank_you', to: 'academy_entry_downloads#show'
+      end
     end
   end
-  resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
 
   namespace :admin do
     manticore_resources :mailchimp_subscriptions
