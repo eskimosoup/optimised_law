@@ -101,7 +101,7 @@ $(function() {
   var $inputs = $('.guide-form-wrapper form .w-input, #new_marketing_assessment_signup .w-input');
   $inputs.each(function() {
     data = readCookie(this.name.match(/[^[\]]+(?=])/g));
-    if(data !== undefined) {
+    if(data !== null) {
       $(this).val(data);
     }
   });
@@ -110,7 +110,7 @@ $(function() {
   $inputs.each(function() {
     input_name = mailchimpFriendly(this.name.toLowerCase());
     data = readCookie(input_name);
-    if(input_name !== undefined) {
+    if(input_name !== null) {
       $(this).val(data);
     }
   });
