@@ -1,33 +1,49 @@
 <section class="w-section internal-banner-space academy-bg" id="Home"></section>
 <div class="w-section guide-download-section purple-bg centred" data-ix="display-tech-nav">
-  <div class="w-container">
-    <div class="w-row">
-      <div class="w-col w-col-4 sent-to-col centred"><<%= image_tag 'academy/check-mark.png',  class: "tick" %>
-        <%= render 'shared/flash_messages' %>
+  <div class="w-container confirmation-block">
+    <div class="box-title-small white text-center">
+      <%= image_tag 'academy-layout/logo.png', alt: 'Optimised Law Academy', class: 'academy-logo' %>
+      <%= link_to 'View all resources', academy_index_path, class: 'navigation-link' %>
+    </div>
 
-        <p class="paragraph-white white-centred"><%= @academy_entry.title.upcase %></p>
-        <div class="green-highlight">has been sent to your inbox</div>
-        <div class="guide-show-div" data-ix="show-up"><%= image_tag @academy_entry.image.small %>
+    <div class="w-row green-bg">
+      <div class="w-col w-col-4 w-clearfix sent-to-col centred">
+        <div class="guide-show-div" data-ix="show-up"><%= link_to (image_tag @academy_entry.image.small), @academy_entry.pdf_download.url %>
         </div>
       </div>
+      <div class="w-col w-col-8 centred"><%= image_tag 'academy/check-mark.png', class: 'tick' %>
+        <%= render 'shared/flash_messages' %>
+        <p class="paragraph-white white-centred"><%= @academy_entry.title.upcase %></p>
+        <div>has been sent to your inbox</div>
+        <div class="paragraph-white"><%= link_to "Download now", @academy_entry.pdf_download.url, class: 'download-now' %></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-container free-internet-container no-offset" data-ix="show-up">
+    <div class="w-row ad-row">
+      <div class="w-col w-col-4"><%= image_tag 'academy/internet-marketing-review-cover.png' %><%= image_tag 'academy/quotation-mark.png', width: 68 %>
+        <p class="quote-copy">With conversion rate optimisation the website Increased conversion rates by <span class="white-highlight">100% within the first week.</span>”</p>
+      </div>
       <div class="w-col w-col-8">
-        <div class="w-form">
-          <h1 class="green-highlight centred"><span class="free">Free</span> Internet Marketing Assessment</h1>
-          <div class="paragraph-white">We specialise in Internet Marketing for law firms. We are offering a free assessment of your existing website and internet marketing to show you how you can maximise your conversion rates.
-            <br>
-            <br> One of team of experts will have review your website and offer suggestions on</div>
-          <ul class="list white">
-            <li>Lead Conversion</li>
-            <li>Landing Pages</li>
-            <li>Lead generation forms</li>
-            <li>Content structure</li>
-            <li>Website performance</li>
-            <li class="green-highlight">And more…</li>
-          </ul>
-          <div class="paragraph-white">If you'd like this free assessment, please fill out the form and one of our experts will contact you shortly.</div>
-
-          <%= render 'marketing_assessment_signups/form' %>
-        </div>
+        <div class="_5000">£5,000</div>
+        <h1 class="centred white"><span class="free">FREE</span> Internet Marketing Assessment</h1>
+        <h3 class="white">More than a review</h3>
+        <p class="p1">We specialise in Internet Marketing for law firms. We are offering a free assessment of your existing website and internet marketing to show you how you can maximise your conversion rates.</p>
+        <div class="paragraph-white">One of our team of experts will review your website and offer suggestions on:</div>
+        <ul class="list white">
+          <li>Lead Conversion</li>
+          <li>Landing Pages</li>
+          <li>Lead generation forms</li>
+          <li>Content structure</li>
+          <li>Website performance</li>
+          <li class="green-highlight">And more…</li>
+        </ul>
+        <a class="button-light centred" href="http://www.optimisedlaw.co.uk/audit">Find our more</a>
+      </div>
+    </div>
+    <div class="w-form">
+      <h6 class="white-centred">I would like a free strategic Audit</h6>
+      <%= render 'marketing_assessment_signups/form' %>
       </div>
     </div>
   </div>

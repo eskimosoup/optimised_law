@@ -1,13 +1,13 @@
 <div class="field">
-  <%= f.text_field :forename, class: 'w-input', placeholder: 'Your First Name', required: true %>
+  <%= f.text_field :forename, value: params[:forename], class: 'w-input', placeholder: 'Your First Name', required: true %>
 </div>
 
 <div class="field">
-  <%= f.text_field :surname, class: 'w-input', placeholder: 'Your Last Name', required: true %>
+  <%= f.text_field :surname, value: params[:surname], class: 'w-input', placeholder: 'Your Last Name', required: true %>
 </div>
 
 <div class="field">
-  <%= f.text_field :email, class: 'w-input', placeholder: 'Your Email Address', required: true %>
+  <%= f.text_field :email, value: params[:email], class: 'w-input', placeholder: 'Your Email Address', required: true %>
 </div>
 
 <div class="actions">

@@ -47,7 +47,7 @@ module Admin
     # params.require(:person).permit(:name, :age)
     # Also, you can specialize this method with per-user checking of permissible attributes.
     def academy_entry_params
-      params.require(:academy_entry).permit(:display, :image, :level, :mailchimp_form, :mailchimp_frequency, :pdf_download, :summary, :title, :image_cache, :remove_image, :remove_pdf_download)
+      params.require(:academy_entry).permit(:display, :image, :level, :email_content, :mailchimp_form, :mailchimp_frequency, :pdf_download, :summary, :title, :image_cache, :remove_image, :remove_pdf_download)
     end
 
   end

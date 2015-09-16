@@ -11,6 +11,6 @@
 
 
 <%= informant_table @mailchimp_subscriptions, {
-      :headings => [ 'Forename', 'Surname', 'Email', 'Mailchimp List Name',  ],
-      :body => [ :forename, :surname, :email, :mailchimp_list_name ]
+      :headings => [ 'Forename', 'Surname', 'Email', 'Mailchimp List Name', 'Created at'  ],
+      :body => [ :forename, :surname, :email, :mailchimp_list_name, :created_at ]
     } %>

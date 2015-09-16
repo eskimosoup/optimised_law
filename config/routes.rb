@@ -1,19 +1,31 @@
 Rails.application.routes.draw do
   resources :articles, only: :show
 
-  constraints subdomain: 'academy.optimisedlaw' do
-    get '/', to: 'academy_entries#index'
+  if Rails.env.production?
+    constraints subdomain: 'academy.optimisedlaw' do
+      get '/', to: 'academy_entries#index'
+      resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
+
+      get '/admin', to: redirect('http://blog.optimisedlaw.co.uk/admin')
+
+      resources :academy_entries, only: [:show], path: '' do
+        member do
+          post 'create', as: 'download', to: 'academy_entry_downloads#create'
+          post 'subscribe', as: 'mailchimp_subscription', to: 'mailchimp_subscriptions#create'
+          get 'thank-you', as: 'thank_you', to: 'academy_entry_downloads#show'
+        end
+      end
+    end
+  else
+    get '/', to: 'academy_entries#index', as: 'academy_index'
     resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
-
-    get '/admin', to: redirect('http://blog.optimisedlaw.co.uk/admin')
-
-    resources :academy_entries, only: [:show], path: '' do
+    resources :academy_entries, only: [:show] do
       member do
         post 'create', as: 'download', to: 'academy_entry_downloads#create'
         post 'subscribe', as: 'mailchimp_subscription', to: 'mailchimp_subscriptions#create'
         get 'thank-you', as: 'thank_you', to: 'academy_entry_downloads#show'
       end
-    end
+    end  
   end
 
   namespace :admin do

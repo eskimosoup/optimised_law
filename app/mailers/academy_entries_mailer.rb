@@ -3,7 +3,7 @@ class AcademyEntriesMailer < ApplicationMailer
     @resource = resource
     @details = details
 
-    mail to: @details.email, subject: "#{@resource.title} - #{SITE_SETTINGS['Name']}"
+    mail to: @details.email, subject: "Thank you for downloading #{@resource.title}"
   end
 
   def new_assessment(details)
