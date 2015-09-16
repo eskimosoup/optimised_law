@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   if Rails.env.production?
     constraints subdomain: 'academy.optimisedlaw' do
-      get '/', to: 'academy_entries#index'
+      get '/', to: 'academy_entries#index', as: 'academy_index'
       resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
 
       get '/admin', to: redirect('http://blog.optimisedlaw.co.uk/admin')
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
         post 'subscribe', as: 'mailchimp_subscription', to: 'mailchimp_subscriptions#create'
         get 'thank-you', as: 'thank_you', to: 'academy_entry_downloads#show'
       end
-    end  
+    end
   end
 
   namespace :admin do
