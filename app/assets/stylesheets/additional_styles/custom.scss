@@ -118,9 +118,67 @@
   margin-bottom: 23px;
 }
 
+/*
 .free-internet-container {
   a {
     color: #fff;
     text-decoration: underline;
   }
+}
+*/
+
+.box-title {
+  &.text-left {
+    text-align: left;
+  }
+}
+
+.academy-logo {
+  margin-right: 50px;
+}
+
+.box-title-small {
+  display: block;
+  padding: 0px 15px 0;
+  background-color: transparent;
+
+  &.white {
+    background: #fff;
+    padding: 10px;
+    margin: 0 0 30px;
+  }
+}
+
+.navigation-link {
+  background: #b0a377;
+  display: inline;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  padding: 20px 40px;
+
+  &:link,
+  &:visited {
+    color: #fff;
+  }
+
+  &:hover,
+  &:active {
+    color: #fff;
+  }
+}
+
+.download-now {
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 10px;
+  display: block;
+  font-weight: 700;
+  width: 50%;
+  margin: 30px auto 0;
 }

@@ -100,13 +100,19 @@ function mailchimpFriendly(string) {
 $(function() {
   var $inputs = $('.guide-form-wrapper form .w-input, #new_marketing_assessment_signup .w-input');
   $inputs.each(function() {
-    $(this).val(readCookie(this.name.match(/[^[\]]+(?=])/g)));
+    data = readCookie(this.name.match(/[^[\]]+(?=])/g));
+    if(data !== undefined) {
+      $(this).val(data);
+    }
   });
 
   $inputs = $('.mc-field-group input');
   $inputs.each(function() {
     input_name = mailchimpFriendly(this.name.toLowerCase());
-    $(this).val(readCookie(input_name));
+    data = readCookie(input_name);
+    if(input_name !== undefined) {
+      $(this).val(data);
+    }
   });
 });
 

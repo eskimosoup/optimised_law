@@ -1,15 +1,874 @@
-<h1><%= @resource.title %> Download</h1>
 
-<p>
-  Hi,
-  <%= @details.forename %>
-  <%= @details.surname %>
-</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    	<!-- NAME: 1 COLUMN -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Optimised Law Academy</title>
 
-<p>
-  Please click the link below to download your resource.
-</p>
+    <style type="text/css">
+		body,#bodyTable,#bodyCell{
+			height:100% !important;
+			margin:0;
+			padding:0;
+			width:100% !important;
+		}
+		table{
+			border-collapse:collapse;
+		}
+		img,a img{
+			border:0;
+			outline:none;
+			text-decoration:none;
+		}
+		h1,h2,h3,h4,h5,h6{
+			margin:0;
+			padding:0;
+		}
+		p{
+			margin:1em 0;
+			padding:0;
+		}
+		a{
+			word-wrap:break-word;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		.ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{
+			line-height:100%;
+		}
+		table,td{
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+		}
+		#outlook a{
+			padding:0;
+		}
+		img{
+			-ms-interpolation-mode:bicubic;
+		}
+		body,table,td,p,a,li,blockquote{
+			-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+		#bodyCell{
+			padding:20px;
+		}
+		.mcnImage{
+			vertical-align:bottom;
+		}
+		.mcnTextContent img{
+			height:auto !important;
+		}
+		body,#bodyTable{
+			background-color:#1e2b3b;
+		}
+		#bodyCell{
+			border-top:0;
+		}
+		#templateContainer{
+			border:0;
+		}
+		h1{
+			color:#ffffff !important;
+			display:block;
+			font-family:Helvetica;
+			font-size:22px;
+			font-style:normal;
+			font-weight:normal;
+			line-height:125%;
+			letter-spacing:normal;
+			margin:0;
+			text-align:center;
+		}
+		h2{
+			color:#5dc3b7 !important;
+			display:block;
+			font-family:Helvetica;
+			font-size:20px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:150%;
+			letter-spacing:normal;
+			margin:0;
+			text-align:left;
+		}
+		h3{
+			color:#606060 !important;
+			display:block;
+			font-family:Helvetica;
+			font-size:18px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:-.5px;
+			margin:0;
+			text-align:left;
+		}
+		h4{
+			color:#808080 !important;
+			display:block;
+			font-family:Helvetica;
+			font-size:16px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			margin:0;
+			text-align:left;
+		}
+		#templatePreheader{
+			background-color:#FFFFFF;
+			border-top:0;
+			border-bottom:0;
+		}
+		.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{
+			color:#b0a377;
+			font-family:Helvetica;
+			font-size:11px;
+			line-height:125%;
+			text-align:left;
+		}
+		.preheaderContainer .mcnTextContent a{
+			color:#b0a377;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateHeader{
+			background-color:#FFFFFF;
+			border-top:0;
+			border-bottom:0;
+		}
+		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
+			color:#606060;
+			font-family:Helvetica;
+			font-size:15px;
+			line-height:150%;
+			text-align:left;
+		}
+		.headerContainer .mcnTextContent a{
+			color:#6DC6DD;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateBody{
+			background-color:#FFFFFF;
+			border-top:0;
+			border-bottom:0;
+		}
+		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+			color:#666666;
+			font-family:Helvetica;
+			font-size:13px;
+			line-height:150%;
+			text-align:left;
+		}
+		.bodyContainer .mcnTextContent a{
+			color:#58c2b5;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateFooter{
+			background-color:#1e2b3b;
+			border-top:0;
+			border-bottom:0;
+		}
+		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
+			color:#999999;
+			font-family:Helvetica;
+			font-size:10px;
+			line-height:100%;
+			text-align:center;
+		}
+		.footerContainer .mcnTextContent a{
+			color:#999999;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+	@media only screen and (max-width: 480px){
+		body,table,td,p,a,li,blockquote{
+			-webkit-text-size-adjust:none !important;
+		}
 
-<p>
-  <%= link_to 'Download PDF resource', "#{root_url}#{@resource.pdf_download.url}" %>
-</p>
+}	@media only screen and (max-width: 480px){
+		body{
+			width:100% !important;
+			min-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[id=bodyCell]{
+			padding:10px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[class=mcnTextContentContainer]{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[class=mcnBoxedTextContentContainer]{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[class=mcpreview-image-uploader]{
+			width:100% !important;
+			display:none !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		img[class=mcnImage]{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[class=mcnImageGroupContentContainer]{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnImageGroupContent]{
+			padding:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnImageGroupBlockInner]{
+			padding-bottom:0 !important;
+			padding-top:0 !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		tbody[class=mcnImageGroupBlockOuter]{
+			padding-bottom:9px !important;
+			padding-top:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[class=mcnCaptionTopContent],table[class=mcnCaptionBottomContent]{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[class=mcnCaptionLeftTextContentContainer],table[class=mcnCaptionRightTextContentContainer],table[class=mcnCaptionLeftImageContentContainer],table[class=mcnCaptionRightImageContentContainer],table[class=mcnImageCardLeftTextContentContainer],table[class=mcnImageCardRightTextContentContainer]{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnImageCardLeftImageContent],td[class=mcnImageCardRightImageContent]{
+			padding-right:18px !important;
+			padding-left:18px !important;
+			padding-bottom:0 !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnImageCardBottomImageContent]{
+			padding-bottom:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnImageCardTopImageContent]{
+			padding-top:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnImageCardLeftImageContent],td[class=mcnImageCardRightImageContent]{
+			padding-right:18px !important;
+			padding-left:18px !important;
+			padding-bottom:0 !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnImageCardBottomImageContent]{
+			padding-bottom:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnImageCardTopImageContent]{
+			padding-top:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[class=mcnCaptionLeftContentOuter] td[class=mcnTextContent],table[class=mcnCaptionRightContentOuter] td[class=mcnTextContent]{
+			padding-top:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnCaptionBlockInner] table[class=mcnCaptionTopContent]:last-child td[class=mcnTextContent]{
+			padding-top:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnBoxedTextContentColumn]{
+			padding-left:18px !important;
+			padding-right:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=mcnTextContent]{
+			padding-right:18px !important;
+			padding-left:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[id=templateContainer],table[id=templatePreheader],table[id=templateHeader],table[id=templateBody],table[id=templateFooter]{
+			max-width:600px !important;
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h1{
+			font-size:18px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h2{
+			font-size:14px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h3{
+			font-size:18px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h4{
+			font-size:16px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[class=mcnBoxedTextContentContainer] td[class=mcnTextContent],td[class=mcnBoxedTextContentContainer] td[class=mcnTextContent] p{
+			font-size:12px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table[id=templatePreheader]{
+			display:block !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=preheaderContainer] td[class=mcnTextContent],td[class=preheaderContainer] td[class=mcnTextContent] p{
+			font-size:9px !important;
+			line-height:115% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=headerContainer] td[class=mcnTextContent],td[class=headerContainer] td[class=mcnTextContent] p{
+			font-size:18px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=bodyContainer] td[class=mcnTextContent],td[class=bodyContainer] td[class=mcnTextContent] p{
+			font-size:12px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=footerContainer] td[class=mcnTextContent],td[class=footerContainer] td[class=mcnTextContent] p{
+			font-size:9px !important;
+			line-height:115% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td[class=footerContainer] a[class=utilityLink]{
+			display:block !important;
+		}
+
+}</style></head>
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #1e2b3b;height: 100% !important;width: 100% !important;">
+        <center>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;background-color: #1e2b3b;height: 100% !important;width: 100% !important;">
+                <tr>
+                    <td align="center" valign="top" id="bodyCell" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 20px;border-top: 0;height: 100% !important;width: 100% !important;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;">
+                            <tr>
+                                <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <!-- BEGIN PREHEADER // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="templatePreheader" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;">
+                                        <tr>
+                                        	<td valign="top" class="preheaderContainer" style="padding-top: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="366" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding-top: 9px;padding-left: 18px;padding-bottom: 9px;padding-right: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #b0a377;font-family: Helvetica;font-size: 11px;line-height: 125%;text-align: left;" valign="top">
+
+                            <a href="http://www.optimisedlaw.co.uk" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #b0a377;font-weight: normal;text-decoration: underline;"><img alt="Optimised Law" class="mcnImage" src="https://gallery.mailchimp.com/c865b1f236e03799f588f292e/images/6f03c530-bfc0-4f83-98f4-daee62628605.png" style="width: 200px;height: 43px;margin: 0px;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" align="none" height="43" width="200"></a>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+                <table class="mcnTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="197" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #b0a377;font-family: Helvetica;font-size: 11px;line-height: 125%;text-align: left;" valign="top">
+
+
+
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END PREHEADER -->
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <!-- BEGIN BODY // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;">
+                                        <tr>
+                                            <td valign="top" class="bodyContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table class="mcnDividerBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="padding: 8px 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+                        <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #666666;font-family: Helvetica;font-size: 13px;line-height: 150%;text-align: left;" valign="top">
+
+                            <h2 style="margin: 0;padding: 0;display: block;font-family: Helvetica;font-size: 20px;font-style: normal;font-weight: bold;line-height: 150%;letter-spacing: normal;text-align: left;color: #5dc3b7 !important;">Hi <%= @details.forename %>,</h2>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnDividerBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width: 100%;padding: 12px 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class="mcnDividerContent" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody><tr>
+                        <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class="mcnDividerBlockInner" style="padding: 18px;">
+                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="366" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding: 9px 0px 9px 18px;color: #424B62;font-family: Arial,&quot;helvetica neue&quot: ;,helvetica,sans-serif: ;font-size: 14px;line-height: 150%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: left;" valign="top">
+
+                            <h2 class="null" style="margin: 0;padding: 0;display: block;font-family: Helvetica;font-size: 20px;font-style: normal;font-weight: bold;line-height: 150%;letter-spacing: normal;text-align: left;color: #5dc3b7 !important;"><%= @resource.title %></h2>
+
+                            <p>Thank you for downloading <%= @resource.title %>, you can access it any time by <%= link_to "clicking here", "#{root_url}#{@resource.pdf_download.url}", title: @resource.title %>.</p>
+
+                            <%= raw @resource.email_content %>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+
+                <table class="mcnTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="197" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding: 9px 18px 9px 0px;color: #424B62;font-family: Arial,&quot;helvetica neue&quot: ;,helvetica,sans-serif: ;font-size: 14px;line-height: 150%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: left;" valign="top">
+
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+	<tbody>
+		<tr>
+			<td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+			<table style="border: 1px solid #424b62;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="8" cellspacing="0">
+				<tbody>
+					<tr>
+						<td style="color: #424B62;font-family: Arial,&quot;helvetica neue&quot: ;,helvetica,sans-serif: ;font-size: 14px;line-height: 150%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: left;" class="mcnTextContent" align="center" bgcolor="#424b62">
+						<div style="color:#fff; font-weight: bold; text-decoration:none; text-align: center;"><a href="#" style="color: #fff;font-weight: bold;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><strong style="color:#fff; font-weight:bold; text-decoration:none">FREE PDF GUIDE</strong></a></div>
+						</td>
+					</tr>
+					<tr>
+						<td style="color: #424B62;font-family: Arial,&quot;helvetica neue&quot: ;,helvetica,sans-serif: ;font-size: 14px;line-height: 150%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: left;" class="mcnTextContent" align="center"><a href="#" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #58c2b5;font-weight: normal;text-decoration: underline;">
+              <img src="<%= root_url %><%= @resource.image.small %>" style="width: 180px;height: 150px;margin: 0px;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"  />
+            </a>
+						<div style="text-align:center; font-style: italic; font-size: 13px; line-height: 18px;"><%= @resource.title %></div>
+						</td>
+					</tr>
+					<tr>
+						<td style="color: #424B62;font-family: Arial,&quot;helvetica neue&quot: ;,helvetica,sans-serif: ;font-size: 14px;line-height: 150%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: left;" class="mcnTextContent" align="center" bgcolor="#5dc3b7">
+						<div style="color:#fff; font-weight: bold; text-decoration:none; text-align: center;"><a href="<%= root_url %><%= @resource.pdf_download.url %>" style="color: #fff;font-weight: bold;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><strong style="color:#fff; font-weight:bold; text-decoration:none">DOWNLOAD NOW</strong></a></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnDividerBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width: 100%;padding: 12px 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class="mcnDividerContent" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody><tr>
+                        <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class="mcnDividerBlockInner" style="padding: 18px;">
+                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnDividerBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width: 100%;padding: 12px 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class="mcnDividerContent" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody><tr>
+                        <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class="mcnDividerBlockInner" style="padding: 18px;">
+                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!--
+<table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #666666;font-family: Helvetica;font-size: 13px;line-height: 150%;text-align: left;" valign="top">
+
+                            <table align="center" border="0" cellpadding="8" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+<tbody>
+<tr>
+						<td class="mcnTextContent" align="center" bgcolor="#5dc3b7" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #666666;font-family: Helvetica;font-size: 13px;line-height: 150%;text-align: left;">
+						<div style="color:#fff; font-weight: bold; text-decoration:none; text-align: center;">
+              <%= link_to "#{root_url}#{@resource.pdf_download.url}", style: "color: #fff;font-weight: bold;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" do %>
+                <strong style="color:#fff; font-weight:bold; text-decoration:none">DOWNLOAD THE PDF GUIDE NOW</strong></a>
+                <% end %>
+            </div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+--><table class="mcnDividerBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width: 100%;padding: 12px 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class="mcnDividerContent" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody><tr>
+                        <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class="mcnDividerBlockInner" style="padding: 18px;">
+                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding: 9px 18px;text-align: left;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #666666;font-family: Helvetica;font-size: 13px;line-height: 150%;" valign="top">
+
+                            <h2 style="margin: 0;padding: 0;display: block;font-family: Helvetica;font-size: 20px;font-style: normal;font-weight: bold;line-height: 150%;letter-spacing: normal;text-align: left;color: #5dc3b7 !important;">Liked this?</h2>
+<br>
+If you need further information on this topic we'd be happy to give you some advice. <a href="http://optimisedlaw.co.uk/#contact" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #58c2b5;font-weight: normal;text-decoration: underline;">Get in touch</a> today.
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnDividerBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="padding: 12px 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+                        <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding: 9px 18px;color: #424B62;font-size: 14px;line-height: 150%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Helvetica;text-align: left;" valign="top">
+
+                            <strong>Regards,<br>
+Amie Woodward</strong><br>
+<img alt="Amie Woodward" src="https://gallery.mailchimp.com/c865b1f236e03799f588f292e/images/9a25386a-c221-4149-85f3-13658bedccde.jpg" style="width: 71px;height: 71px;margin: 8px 0px;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" align="none" height="71" width="71"><br>
+<strong style="color:#5dc3b7; font-weight:bold">Internet Marketing Manager</strong><br>
+<strong>Optimised Law</strong><br>
+<br>
+We believe all law firms can improve sales and client relationships through internet technology.<br>
+<br>
+We work with people who believe in what we believe.
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnDividerBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="padding: 8px 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+                        <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table><table style="background-color: #58C2B5;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnDividerBlock" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="padding: 5px 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+                        <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table><table class="mcnCodeBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <style type="text/css">
+    @media only screen and (max-width: 480px){
+        #templateColumns{
+            width:100% !important;
+        }
+
+        .templateColumnContainer{
+            display:block !important;
+            width:100% !important;
+        }
+
+        .templateHeight{
+        	height:auto !important;
+        }
+    }
+</style>
+
+
+<table height="100%" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+	<tbody>
+		<tr>
+			<td height="220" background="https://gallery.mailchimp.com/c865b1f236e03799f588f292e/images/f8473d0b-45a6-4fd5-8389-a22f0f1e55ea.jpg" bgcolor="#464355" valign="top" width="600" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            <!--[if gte mso 9]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:220px;">
+    <v:fill type="tile" src="https://gallery.mailchimp.com/c865b1f236e03799f588f292e/images/f8473d0b-45a6-4fd5-8389-a22f0f1e55ea.jpg" color="#464355" />
+    <v:textbox inset="0,0,0,0">
+  <![endif]-->
+
+<table id="templateColumns" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody><tr>
+        <td class="templateColumnContainer" align="center" valign="top" width="33%" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            <table border="0" cellpadding="10" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <tbody><tr>
+                    <td style="color: #ffffff;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size: 11px;line-height: 14px;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="templateHeight" align="center" height="50" valign="top">
+                      <div class="mcnTextContent" style="color: #fff;text-align: center;font-size: 11px;line-height: 14px;font-family: Helvetica;">
+		For more articles visit the Optimised Law Academy.
+	</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                      <a href="http://academy.optimisedlaw.co.uk" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img alt="Articles" src="https://gallery.mailchimp.com/c865b1f236e03799f588f292e/images/db4ce3c4-d206-4946-b4c1-070c44fda879.png" style="width: 80px;height: 80px;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" height="80" width="80"></a>
+                    </td>
+                </tr>
+                <tr>
+                  <td style="color: #ffffff;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size: 11px;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" align="center" valign="top">
+                  <div class="mcnTextContent" style="color: #fff;text-align: center;font-size: 11px;font-family: Helvetica;line-height: 150%;">
+		<a href="http://academy.optimisedlaw.co.uk" target="_blank" style="color: #fff;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal;"><span style="color:#fff; text-decoration: none;">academy.optimisedlaw.co.uk</span></a>
+	</div>
+                  </td>
+                </tr>
+            </tbody></table>
+        </td>
+        <td class="templateColumnContainer" align="center" valign="top" width="33%" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="10" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+          <tbody><tr>
+            <td style="color: #ffffff;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size: 11px;line-height: 14px;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="templateHeight" align="center" height="50" valign="top"><div class="mcnTextContent" style="color: #fff;text-align: center;font-size: 11px;line-height: 14px;font-family: Helvetica;">Need answers to a specific question? No problem, email us.
+            </div></td>
+          </tr>
+          <tr>
+            <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="mailto:amie@optimisedlaw.co.uk" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img alt="Email" src="https://gallery.mailchimp.com/c865b1f236e03799f588f292e/images/95f52b83-d743-4956-b070-5f43e7f3e0ee.png" style="width: 80px;height: 80px;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" height="80" width="80"></a></td>
+          </tr>
+          <tr>
+            <td style="color: #ffffff;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size: 11px;line-height: 14px;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" align="center" valign="top"><div class="mcnTextContent" style="color: #fff;text-align: center;font-size: 11px;line-height: 14px;font-family: Helvetica;">
+		<a href="mailto:amie@optimisedlaw.co.uk" target="_blank" style="color: #fff;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal;"><span style="color:#fff; text-decoration: none;">amie@optimisedlaw.co.uk</span></a>
+	</div></td>
+          </tr>
+        </tbody></table></td>
+                <td class="templateColumnContainer" align="center" valign="top" width="33%" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="10" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                  <tbody><tr>
+                    <td style="color: #ffffff;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size: 11px;line-height: 14px;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="templateHeight" align="center" height="50" valign="top"><div class="mcnTextContent" style="color: #fff;text-align: center;font-size: 11px;line-height: 14px;font-family: Helvetica;">Apply for a FREE Internet Marketing Audit. Includes full list of recommendations. Worth £5k.
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="http://www.optimisedlaw.co.uk/audit" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img alt="Audit" src="https://gallery.mailchimp.com/c865b1f236e03799f588f292e/images/df84fcb4-a129-4f22-bfa7-b993120a6d92.png" style="width: 80px;height: 80px;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" height="80" width="80"></a></td>
+                  </tr>
+                  <tr>
+                    <td style="color: #ffffff;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size: 11px;line-height: 14px;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" align="center" valign="top"><div class="mcnTextContent" style="color: #fff;text-align: center;font-size: 11px;line-height: 14px;font-family: Helvetica;">
+		<a href="http://www.optimisedlaw.co.uk/audit" target="_blank" style="color: #fff;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: normal;"><span style="color:#fff; text-decoration: none;">optimisedlaw.co.uk/audit</span></a>
+	</div></td>
+                  </tr>
+                </tbody></table></td>
+
+    </tr>
+</tbody></table>
+			<!--[if gte mso 9]>
+        </v:textbox>
+      </v:rect>
+      <![endif]--></td>
+		</tr>
+	</tbody>
+</table>
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END BODY -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <!-- BEGIN FOOTER // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #1e2b3b;border-top: 0;border-bottom: 0;">
+                                        <tr>
+                                            <td valign="top" class="footerContainer" style="padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+
+                        <td class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #999999;font-family: Helvetica;font-size: 10px;line-height: 100%;text-align: center;" valign="top">
+
+                            <br>
+Optimised • Salters House, Salters Court, 156 High Street, Hull, HU1 1NQ • 0333 772 9892 • <a href="mailto:info@optimisedlaw.co.uk" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #999999;font-weight: normal;text-decoration: underline;">info@optimisedlaw.co.uk</a><br>
+
+<br>
+Copyright © 2015 Optimised, All rights reserved.<br>
+<br>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END FOOTER -->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // END TEMPLATE -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

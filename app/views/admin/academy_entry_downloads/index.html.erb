@@ -5,7 +5,7 @@
 </div>
 
 <%= informant_table @academy_entry_downloads, {
-      :headings => [ 'Academy Entry', 'Forename', 'Surname', 'Email' ],
-      :body => [ lambda{|x| x.academy_entry.title }, :forename, :surname, :email ]
+      :headings => [ 'Academy Entry', 'Forename', 'Surname', 'Email', 'Created at' ],
+      :body => [ lambda{|x| x.academy_entry.title }, :forename, :surname, :email, :created_at ]
       #:body => [ :forename, :surname, :email, :company, it_edit, it_destroy ]
     } %>
