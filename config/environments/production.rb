@@ -1,5 +1,5 @@
 Rails.application.configure do
-  Rails.application.routes.default_url_options[:host] = 'blog.optimisedlaw.co.uk'
+  Rails.application.routes.default_url_options[:host] = 'academy.optimisedlaw.co.uk'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
