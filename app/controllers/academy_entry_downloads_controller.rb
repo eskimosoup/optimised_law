@@ -6,7 +6,7 @@ class AcademyEntryDownloadsController < ApplicationController
     @academy_entry_download.academy_entry_id = @academy_entry.id
     if @academy_entry_download.save
       AcademyEntriesMailer.new_resource(@academy_entry, @academy_entry_download).deliver_now
-      redirect_to thank_you_academy_entry_path(@academy_entry), notice: 'Thank you for your interest'
+      redirect_to thank_you_academy_entry_path(@academy_entry), notice: 'Thank you for your interest in'
     else
       render 'academy_entries/show'
     end
