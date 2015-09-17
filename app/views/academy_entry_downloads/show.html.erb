@@ -14,8 +14,15 @@
       <div class="w-col w-col-8 centred"><%= image_tag 'academy/check-mark.png', class: 'tick' %>
         <%= render 'shared/flash_messages' %>
         <p class="paragraph-white white-centred"><%= @academy_entry.title.upcase %></p>
-        <div>has been sent to your inbox</div>
-        <div class="paragraph-white"><%= link_to "Download now", @academy_entry.pdf_download.url, class: 'download-now' %></div>
+
+        <% if @academy_entry.mailchimp_form.present? %>
+          <div>Please check your inbox for a subscription confirmation email.</div>
+          <div class="paragraph-white"><%= link_to "Can't wait? <br /> Download the full guide now.".html_safe, @academy_entry.pdf_download.url, class: 'download-now' %></div>
+        <% else %>
+          <div>Use the button below to download your guide</div>
+          <div class="paragraph-white"><%= link_to "Download now", @academy_entry.pdf_download.url, class: 'download-now' %></div>
+          <div>We have also sent a copy of this guide to you by email.</div>
+        <% end %>
       </div>
     </div>
   </div>

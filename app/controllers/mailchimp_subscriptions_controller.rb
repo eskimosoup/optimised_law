@@ -6,7 +6,7 @@ class MailchimpSubscriptionsController < ApplicationController
     @mailchimp_subscription.mailchimp_list_name = @academy_entry.mailchimp_form_name
     @notice = MailchimpSubscription.subscribe(@academy_entry.mailchimp_form, mailchimp_subscription_params)
     if @notice == true && @mailchimp_subscription.save
-      redirect_to thank_you_academy_entry_path(@academy_entry), notice: 'Thank you for your interest'
+      redirect_to thank_you_academy_entry_path(@academy_entry), notice: 'Thank you for your interest in'
     elsif @notice == 'You are already subscribed'
       redirect_to thank_you_academy_entry_path(@academy_entry), notice: @notice
     else
