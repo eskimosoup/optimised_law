@@ -12,8 +12,12 @@
         </div>
       </div>
       <div class="w-col w-col-8 centred"><%= image_tag 'academy/check-mark.png', class: 'tick' %>
-        <%= render 'shared/flash_messages' %>
-        <p class="paragraph-white white-centred"><%= @academy_entry.title.upcase %></p>
+        <div class="flash-wrap">
+          <div class="flash-message notice">
+            Thank you for your interest in<br />
+            <%= @academy_entry.title.upcase %>
+          </div>
+        </div>
 
         <% if @academy_entry.mailchimp_form.present? %>
           <div>Please check your inbox for a subscription confirmation email.</div>
