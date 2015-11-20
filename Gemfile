@@ -43,15 +43,15 @@ group :development, :test do
   #gem 'spring'
 end
 
-#gem 'informant', :git => 'git@github.com:eskimosoup/informant.git'
-#gem 'chronicler', :git => 'git@github.com:eskimosoup/chronicler.git'
-#gem 'willow', :git => 'git@github.com:eskimosoup/willow.git'
-#gem 'manticore', :git => 'git@github.com:eskimosoup/manticore.git'
+gem 'informant', :git => 'git@github.com:eskimosoup/informant.git'
+gem 'chronicler', :git => 'git@github.com:eskimosoup/chronicler.git'
+gem 'willow', :git => 'git@github.com:eskimosoup/willow.git'
+gem 'manticore', :git => 'git@github.com:eskimosoup/manticore.git'
 
-gem 'informant', :git => 'git@github-pauleskimosoup:eskimosoup/informant.git'
-gem 'chronicler', :git => 'git@github-pauleskimosoup:eskimosoup/chronicler.git'
-gem 'willow', :git => 'git@github-pauleskimosoup:eskimosoup/willow.git'
-gem 'manticore', :git => 'git@github-pauleskimosoup:eskimosoup/manticore.git'
+#gem 'informant', :git => 'git@github-pauleskimosoup:eskimosoup/informant.git'
+#gem 'chronicler', :git => 'git@github-pauleskimosoup:eskimosoup/chronicler.git'
+#gem 'willow', :git => 'git@github-pauleskimosoup:eskimosoup/willow.git'
+#gem 'manticore', :git => 'git@github-pauleskimosoup:eskimosoup/manticore.git'
 
 gem 'mailchimp-api'
 gem 'jquery-ui-rails'
