@@ -4,9 +4,9 @@ module Admin
 
     def index
       if params[:mailchimp_list_name].present?
-        @mailchimp_subscriptions = MailchimpSubscription.where(mailchimp_list_name: params[:mailchimp_list_name]).order(email: :asc, created_at: :desc)
+        @mailchimp_subscriptions = MailchimpSubscription.where(mailchimp_list_name: params[:mailchimp_list_name]).order(email: :desc, created_at: :desc)
       else
-        @mailchimp_subscriptions = MailchimpSubscription.order(email: :asc, created_at: :desc)
+        @mailchimp_subscriptions = MailchimpSubscription.order(email: :desc, created_at: :desc)
       end
     end
 
