@@ -219,7 +219,7 @@ p {
   margin-top: 0px;
   padding-top: 106px;
   background-color: black;
-  background-image: url('../images/contact-us-bg.jpg');
+  background-image: image-url('contact-us-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -229,7 +229,7 @@ p {
   margin-top: 0px;
   padding-top: 122px;
   padding-bottom: 0px;
-  background-image: url('../images/team.jpg');
+  background-image: image-url('team.jpg');
   background-position: 100% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -240,7 +240,7 @@ p {
   padding-top: 0px;
   padding-bottom: 0px;
   background-color: transparent;
-  background-image: url('../images/boundary-circles.png');
+  background-image: image-url('boundary-circles.png');
   background-position: 100% 255px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -249,7 +249,7 @@ p {
 .content-section.prices {
   height: auto;
   padding-top: 113px;
-  background-image: url('../images/pricing-bg.jpg');
+  background-image: image-url('pricing-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -264,24 +264,24 @@ p {
   height: auto;
   margin-top: 0px;
   padding-top: 0px;
-  background-image: url('../images/MAP.png'), url('../images/boundary-circles.png');
+  background-image: image-url('MAP.png'), image-url('boundary-circles.png');
   background-position: 0% 0%, 100% 0px;
   background-size: cover, auto;
   background-repeat: no-repeat, no-repeat;
   background-attachment: scroll, fixed;
 }
 .content-section.circle-behind-book {
-  background-image: url('../images/boundary-circles-white.png');
+  background-image: image-url('boundary-circles-white.png');
 }
 .content-section.monitor-bg {
-  background-image: url('../images/work-mac.png');
+  background-image: image-url('work-mac.png');
   background-position: 100% 0px;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .content-section.grey-bg {
   background-color: #ecebeb;
-  background-image: url('../images/Iphone.png');
+  background-image: image-url('Iphone.png');
   background-position: 143% 0px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -292,8 +292,8 @@ p {
   z-index: 4;
   display: block;
   height: 550px;
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), rgba(61, 51, 86, 0.6)), url('../images/banner-bg-1.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.49), rgba(61, 51, 86, 0.6)), url('../images/banner-bg-1.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), rgba(61, 51, 86, 0.6)), image-url('banner-bg-1.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), rgba(61, 51, 86, 0.6)), image-url('banner-bg-1.jpg');
   background-position: 0% 0%, 50% 100%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -303,7 +303,7 @@ p {
 .slide-1 {
   overflow-x: hidden;
   overflow-y: hidden;
-  background-image: url('../images/bg-hd.jpg');
+  background-image: image-url('bg-hd.jpg');
   background-size: 56px;
   background-repeat: repeat-x;
 }
@@ -511,7 +511,7 @@ p {
   width: 85px;
   padding: 29px;
   background-color: #5cc4b7;
-  background-image: url('../images/mail-icon.svg');
+  background-image: image-url('mail-icon.svg');
   background-position: 50% 50%;
   background-size: 25px;
   background-repeat: no-repeat;
@@ -590,7 +590,7 @@ p {
   margin-top: 50px;
   margin-bottom: 0px;
   padding-bottom: 70px;
-  background-image: url('../images/cloud.png');
+  background-image: image-url('cloud.png');
   background-position: 50% 0px;
   background-repeat: no-repeat;
   line-height: 25px;
@@ -599,7 +599,7 @@ p {
 .icon-bg {
   height: 125px;
   margin-bottom: 20px;
-  background-image: url('../images/circle.png');
+  background-image: image-url('circle.png');
   background-position: 50% 0px;
   background-size: 120px;
   background-repeat: no-repeat;
@@ -642,7 +642,7 @@ p {
   padding-top: 40px;
   padding-bottom: 0px;
   float: left;
-  background-image: url('../images/top-dot.jpg'), url('../images/');
+  background-image: image-url('top-dot.jpg'), image-url('');
   background-position: 50% 0px, 50% 100%;
   background-repeat: repeat-x, repeat-x;
 }
@@ -815,7 +815,7 @@ p {
 .contact-text {
   padding-left: 30px;
   float: left;
-  background-image: url('../images/pin.png');
+  background-image: image-url('pin.png');
   background-position: 0px 50%;
   background-size: 16px;
   background-repeat: no-repeat;
@@ -823,10 +823,10 @@ p {
   color: #818590;
 }
 .contact-text.phone {
-  background-image: url('../images/phone-icon.png');
+  background-image: image-url('phone-icon.png');
 }
 .contact-text.address {
-  background-image: url('../images/pin_1.png');
+  background-image: image-url('pin_1.png');
   background-size: 16px;
   font-size: 12px;
 }
@@ -1164,8 +1164,8 @@ p {
   position: relative;
   margin-top: 34px;
   background-color: rgba(176, 163, 119, 0.74);
-  background-image: -webkit-linear-gradient(99deg, rgba(119, 115, 100, 0.49), rgba(176, 163, 119, 0.78)), url('../images/boundary-circles-white.png');
-  background-image: linear-gradient(351deg, rgba(119, 115, 100, 0.49), rgba(176, 163, 119, 0.78)), url('../images/boundary-circles-white.png');
+  background-image: -webkit-linear-gradient(99deg, rgba(119, 115, 100, 0.49), rgba(176, 163, 119, 0.78)), image-url('boundary-circles-white.png');
+  background-image: linear-gradient(351deg, rgba(119, 115, 100, 0.49), rgba(176, 163, 119, 0.78)), image-url('boundary-circles-white.png');
   background-position: 0% 0%, -20% 50%;
   background-size: auto, auto;
   background-repeat: repeat, no-repeat;
@@ -1207,7 +1207,7 @@ p {
 }
 .attract-copy-box {
   padding: 74px 82px;
-  background-image: url('../images/attract textured bg.png');
+  background-image: image-url('attract-textured-bg.png');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1448,14 +1448,14 @@ p {
 .internal-container.dark-bg {
   padding-top: 25px;
   background-color: transparent;
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.8), #3d3356), url('../images/shutterstock_221281993.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.8), #3d3356), url('../images/shutterstock_221281993.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.8), #3d3356), image-url('shutterstock_221281993.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.8), #3d3356), image-url('shutterstock_221281993.jpg');
 }
 .internal-container.bronze-bg {
   padding-top: 25px;
   background-color: transparent;
-  background-image: -webkit-linear-gradient(rgba(119, 115, 100, 0.8), #59545c), url('../images/shutterstock_110158850.jpg');
-  background-image: linear-gradient(rgba(119, 115, 100, 0.8), #59545c), url('../images/shutterstock_110158850.jpg');
+  background-image: -webkit-linear-gradient(rgba(119, 115, 100, 0.8), #59545c), image-url('shutterstock_110158850.jpg');
+  background-image: linear-gradient(rgba(119, 115, 100, 0.8), #59545c), image-url('shutterstock_110158850.jpg');
 }
 .internal-container.light-gold-bg {
   background-color: #b0a377;
@@ -1478,8 +1478,8 @@ p {
   background-attachment: scroll;
 }
 .internal-banner-space.manage {
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_125806730.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_125806730.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_125806730.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_125806730.jpg');
   background-size: auto, auto;
   background-attachment: scroll, scroll;
 }
@@ -1493,40 +1493,40 @@ p {
 }
 .internal-banner-space.tech-bg {
   position: static;
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/new-bg.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/new-bg.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('new-bg.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('new-bg.jpg');
   background-position: 0% 0%, 0% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, fixed;
 }
 .internal-banner-space.internet-marketing-bg {
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_174125366.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_174125366.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_174125366.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_174125366.jpg');
   background-position: 0% 0%, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, fixed;
 }
 .internal-banner-space.about-us-bg {
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_149967842.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_149967842.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_149967842.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_149967842.jpg');
   background-position: 0% 0%, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, fixed;
 }
 .internal-banner-space.guides {
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_126874874.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_126874874.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_126874874.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_126874874.jpg');
   background-position: 0% 0%, 50% 187%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, fixed;
 }
 .internal-banner-space.clients-rio-bg {
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_104832707.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/shutterstock_104832707.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_104832707.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('shutterstock_104832707.jpg');
   background-position: 0% 0%, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -1534,8 +1534,8 @@ p {
 }
 .internal-banner-space.academy-bg {
   padding-bottom: 0px;
-  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/academy-bg.jpg');
-  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), url('../images/academy-bg.jpg');
+  background-image: -webkit-linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('academy-bg.jpg');
+  background-image: linear-gradient(rgba(61, 51, 86, 0.49), #27282d), image-url('academy-bg.jpg');
   background-size: auto, auto;
   background-attachment: scroll, scroll;
 }
@@ -1780,8 +1780,8 @@ p {
 .section-modules.email-series-section-bg {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-image: url('../images/shutterstock_126874874.jpg'), -webkit-linear-gradient(rgba(61, 51, 86, 0.88), rgba(61, 51, 86, 0.89));
-  background-image: url('../images/shutterstock_126874874.jpg'), linear-gradient(rgba(61, 51, 86, 0.88), rgba(61, 51, 86, 0.89));
+  background-image: image-url('shutterstock_126874874.jpg'), -webkit-linear-gradient(rgba(61, 51, 86, 0.88), rgba(61, 51, 86, 0.89));
+  background-image: image-url('shutterstock_126874874.jpg'), linear-gradient(rgba(61, 51, 86, 0.88), rgba(61, 51, 86, 0.89));
   background-position: 0% 0%, 0% 0%;
   background-size: auto, auto;
   background-repeat: repeat, repeat;
@@ -2096,7 +2096,7 @@ p {
   width: 50%;
   height: 100%;
   float: right;
-  background-image: url('../images/shutterstock_126874874.jpg');
+  background-image: image-url('shutterstock_126874874.jpg');
 }
 .white-col {
   background-color: white;
@@ -2319,8 +2319,8 @@ p {
   background-color: white;
 }
 .bg-abstract-1-section {
-  background-image: -webkit-linear-gradient(rgba(39, 40, 45, 0.56), rgba(61, 51, 86, 0.59)), url('../images/shutterstock_221281993.jpg');
-  background-image: linear-gradient(rgba(39, 40, 45, 0.56), rgba(61, 51, 86, 0.59)), url('../images/shutterstock_221281993.jpg');
+  background-image: -webkit-linear-gradient(rgba(39, 40, 45, 0.56), rgba(61, 51, 86, 0.59)), image-url('shutterstock_221281993.jpg');
+  background-image: linear-gradient(rgba(39, 40, 45, 0.56), rgba(61, 51, 86, 0.59)), image-url('shutterstock_221281993.jpg');
   background-position: 0% 0%, 50% 100%;
   background-attachment: scroll, fixed;
 }
