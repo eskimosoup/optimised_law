@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       end
     end
   else
-    get '/', to: 'academy_entries#index', as: 'academy_index'
+    #get '/', to: 'academy_entries#index', as: 'academy_index'
     resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
     resources :academy_entries, only: [:show] do
       member do
