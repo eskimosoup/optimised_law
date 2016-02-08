@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -43,10 +43,10 @@ group :development, :test do
   #gem 'spring'
 end
 
-gem 'informant', :git => 'git@github.com:eskimosoup/informant.git'
-gem 'chronicler', :git => 'git@github.com:eskimosoup/chronicler.git'
-gem 'willow', :git => 'git@github.com:eskimosoup/willow.git'
-gem 'manticore', :git => 'git@github.com:eskimosoup/manticore.git'
+gem 'informant', git: 'git@github.com:eskimosoup/informant.git'
+gem 'chronicler', git: 'git@github.com:eskimosoup/chronicler.git'
+gem 'willow', git: 'git@github.com:eskimosoup/willow.git'
+gem 'manticore', git: 'git@github.com:eskimosoup/manticore.git'
 
 #gem 'informant', :git => 'git@github-pauleskimosoup:eskimosoup/informant.git'
 #gem 'chronicler', :git => 'git@github-pauleskimosoup:eskimosoup/chronicler.git'
