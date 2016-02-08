@@ -1,0 +1,23 @@
+<div class="w-section section-modules email-series-section-bg" data-ix="display-tech-nav">
+  <div class="w-section section">
+    <div class="w-container internal-container">
+      <% if @academy_resources.present? %>
+      <div class="box-title text-left">
+        <%= image_tag 'academy-layout/logo.png', alt: 'Optimised Law Academy', class: 'academy-logo' %><h6 class="gold-block">quick guides</h6>
+        <div class="internal-copy">Our quick guides offer practical advice on a specific subject and will usually take just 5 minutes of your time to read.</div>
+      </div>
+      <div class="w-row">
+        <%= render partial: 'download_academy_entry', collection: @academy_resources, as: :academy_entry %>
+      </div>
+    </div>
+
+    <% end %>
+  </div>
+</div>
+
+<div class="academy-downloads">
+  <%= render 'marketing_assessment_signups/call_to_action' %>
+</div>
+
+
+<%= render 'shared/flash_messages' %>
