@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   if Rails.env.production?
     constraints subdomain: 'academy.optimisedlaw' do
       get '/', to: 'academy_entries#index', as: 'academy_index'
+      get '/downloads', to: 'academy_entries#downloads', as: 'academy_downloads'
       resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
 
       get '/admin', to: redirect('http://blog.optimisedlaw.co.uk/admin')
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
       end
     end
   else
+    get '/downloads', to: 'academy_entries#downloads', as: 'academy_downloads'
     #get '/', to: 'academy_entries#index', as: 'academy_index'
     resources :marketing_assessment_signups, only: [:new, :create], path: 'free-internet-marketing-assessment'
     resources :academy_entries, only: [:show] do

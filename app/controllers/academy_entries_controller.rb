@@ -7,6 +7,11 @@ class AcademyEntriesController < ApplicationController
     @marketing_assessment_signup = MarketingAssessmentSignup.new
   end
 
+  def downloads
+    @academy_resources = AcademyEntry.pdf_resources
+    @marketing_assessment_signup = MarketingAssessmentSignup.new
+  end
+
   def show
     @academy_entry_download = AcademyEntryDownload.new if @academy_entry.mailchimp_form.blank?
     @mailchimp_subscription = MailchimpSubscription.new if @academy_entry.mailchimp_form.present?
