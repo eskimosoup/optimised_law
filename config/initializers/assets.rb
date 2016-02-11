@@ -9,4 +9,4 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w( core.css manticore.js tinymce/plugins/mantimage/plugin.js tinymce/plugins/mantlink/plugin.js )
+Rails.application.config.assets.precompile += %w( core.css manticore.js manticore/* informant/* chronicler/* tinymce/plugins/mantimage/plugin.js tinymce/plugins/mantlink/plugin.js )
