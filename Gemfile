@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.1'
+gem 'rails', '4.2.5.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -40,7 +39,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  #gem 'spring'
+  # gem 'spring'
 end
 
 gem 'informant', git: 'git@github.com:eskimosoup/informant.git'
@@ -48,10 +47,10 @@ gem 'chronicler', git: 'git@github.com:eskimosoup/chronicler.git'
 gem 'willow', git: 'git@github.com:eskimosoup/willow.git'
 gem 'manticore', git: 'git@github.com:eskimosoup/manticore.git'
 
-#gem 'informant', :git => 'git@github-pauleskimosoup:eskimosoup/informant.git'
-#gem 'chronicler', :git => 'git@github-pauleskimosoup:eskimosoup/chronicler.git'
-#gem 'willow', :git => 'git@github-pauleskimosoup:eskimosoup/willow.git'
-#gem 'manticore', :git => 'git@github-pauleskimosoup:eskimosoup/manticore.git'
+# gem 'informant', :git => 'git@github-pauleskimosoup:eskimosoup/informant.git'
+# gem 'chronicler', :git => 'git@github-pauleskimosoup:eskimosoup/chronicler.git'
+# gem 'willow', :git => 'git@github-pauleskimosoup:eskimosoup/willow.git'
+# gem 'manticore', :git => 'git@github-pauleskimosoup:eskimosoup/manticore.git'
 
 gem 'mailchimp-api'
 gem 'jquery-ui-rails'
